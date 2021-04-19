@@ -7,6 +7,8 @@ defmodule Nl5inmanaWeb.Router do
 
   scope "/api", Nl5inmanaWeb do
     pipe_through :api
+
+    get "/", WelcomeController, :index
   end
 
   # Enables LiveDashboard only for development
