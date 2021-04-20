@@ -10,6 +10,10 @@ use Mix.Config
 config :nl5inmana,
   ecto_repos: [Nl5inmana.Repo]
 
+config :nl5inmana, Nl5inmana.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 # Configures the endpoint
 config :nl5inmana, Nl5inmanaWeb.Endpoint,
   url: [host: "localhost"],
